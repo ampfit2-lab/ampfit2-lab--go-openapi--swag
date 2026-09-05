@@ -1,0 +1,19 @@
+name: go test
+
+permissions:
+  pull-requests: read
+  contents: read
+
+on:
+  push:
+    branches:
+      - master
+
+  pull_request:
+
+jobs:
+  test:
+    uses: go-openapi/ci-workflows/.github/workflows/go-test-monorepo.yml@cba06a2e6390abfedda6bf1067f44741cbe93650 # v0.6.2
+    with:
+      extra-flags: '-tags poolsdebug'
+    secrets: inherit
