@@ -1,0 +1,13 @@
+{
+  "scope": "Package directories in modules listed in go.work, excluding vendor, testdata, and directories beginning with . or _.",
+  "method": "Count direct *_test.go files regardless of build constraints. Include documentation-only and generated packages; tests in other directories do not count.",
+  "workspace_module_count": 17,
+  "package_directory_count": 24,
+  "packages_without_tests": [
+    "cmdutils",
+    "jsonname",
+    "jsonutils/adapters/easyjson",
+    "jsonutils/adapters/ifaces/mocks",
+    "jsonutils/adapters/stdlib"
+  ]
+}
